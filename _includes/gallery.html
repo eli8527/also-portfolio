@@ -1,10 +1,21 @@
 {% if page.gallery %}
 	<section class="gallery">
 		{% for image in page.gallery %}
-			<figure>
+			<figure
+				{% if false %}
+					style="--span: span {{image.span}};"
+				{% endif %}
+				>
 				<img src="{{ image.file }}">
 				<figcaption>{{ image.title }}</figcaption>
 			</figure>
 		{% endfor %}
 	</section>
+	<script>
+		let figs = document.querySelectorAll('.gallery figure');
+		figs.forEach((fig) => {
+			let randomSpan = Math.round(Math.random()*2);
+			fig.style.setProperty('--span', `span ${randomSpan}`);
+		})
+	</script>
 {% endif %}

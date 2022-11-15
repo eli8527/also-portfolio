@@ -1,8 +1,10 @@
 ---
 layout: work
-title: "Work Entry two"
+title: "My example work"
 order: 1
 preview: 1.jpg
+description: During my summer internship, I did work.
+summary: This is my summary
 ---
 
 ## Easier text markup
